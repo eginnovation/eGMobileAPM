@@ -14,13 +14,11 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 eGMobileAPM is a monitoring framework. It collects the metrics from the application and send it to eG Agent. It involves gathering metrics and perfomance statistics about your applocation.
                        DESC
-  s.homepage         = 'https://github.com/eginnovations/eGMobileAPM'
+  s.homepage         = 'https://github.com/eginnovation/eGMobileAPM'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'eginnovation' => 'saikishore.k@eginnovations.com' }
   s.source           = { :git => 'https://github.com/eginnovation/eGMobileAPM.git', :tag => s.version.to_s }
   s.vendored_frameworks = 'eGMobileAPM/Frameworks/eGMobileAPM.framework'
-  s.xcconfig = {'ENABLE_BITCODE' => 'NO'}
-  s.source_files = 'eGMobileAPM/Classes/**/*.{swift,h,m,c,cc,mm,cpp}'
   s.ios.deployment_target  = '9.0'
   s.swift_version = '5.1'
 
