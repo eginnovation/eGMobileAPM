@@ -1,0 +1,22 @@
+{
+  "name": "eGMobileAPM",
+  "version": "0.1.0",
+  "summary": "A short description of eGMobileAPM.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/eginnovations/eGMobileAPM",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "eginnovations": "Mahadeva.S@eginnovations.com"
+  },
+  "source": {
+    "git": "https://github.com/eginnovations/eGMobileAPM.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "eGMobileAPM/Classes/**/*"
+}

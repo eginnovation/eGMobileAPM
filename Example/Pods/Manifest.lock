@@ -1,0 +1,16 @@
+PODS:
+  - eGMobileAPM (0.1.0)
+
+DEPENDENCIES:
+  - eGMobileAPM (from `../`)
+
+EXTERNAL SOURCES:
+  eGMobileAPM:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  eGMobileAPM: 67dc5c0b9181c9fc21312b653cbaed3c9c2b711c
+
+PODFILE CHECKSUM: 3e9e209b169ed7fd2228676b1377cc28230b0cf7
+
+COCOAPODS: 1.9.3

@@ -1,0 +1,11 @@
+framework module eGMobileAPM {
+  umbrella header "eGMobileAPM.h"
+
+  export *
+  module * { export * }
+}
+
+module eGMobileAPM.Swift {
+    header "eGMobileAPM-Swift.h"
+    requires objc
+}

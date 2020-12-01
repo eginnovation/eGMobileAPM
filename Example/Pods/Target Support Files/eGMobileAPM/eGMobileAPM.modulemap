@@ -1,0 +1,6 @@
+framework module eGMobileAPM {
+  umbrella header "eGMobileAPM-umbrella.h"
+
+  export *
+  module * { export * }
+}

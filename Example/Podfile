@@ -1,0 +1,6 @@
+use_frameworks!
+target 'eGMobileAPM_Tests' do
+  pod 'eGMobileAPM', :path => '../'
+  
+  
+end
