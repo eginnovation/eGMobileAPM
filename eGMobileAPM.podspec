@@ -16,7 +16,7 @@ eGMobileAPM is a monitoring framework. It collects the metrics from the applicat
                        DESC
   s.homepage         = 'https://github.com/eginnovations/eGMobileAPM'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'eginnovations' => 'saikishore.k@eginnovations.com' }
+  s.author           = { 'eginnovation' => 'saikishore.k@eginnovations.com' }
   s.source           = { :git => 'https://github.com/eginnovation/eGMobileAPM.git', :tag => s.version.to_s }
   s.vendored_frameworks = 'eGMobileAPM/Frameworks/eGMobileAPM.framework'
   s.xcconfig = {'ENABLE_BITCODE' => 'NO'}

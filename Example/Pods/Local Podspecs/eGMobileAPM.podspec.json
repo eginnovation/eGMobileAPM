@@ -1,22 +1,22 @@
 {
   "name": "eGMobileAPM",
-  "version": "0.1.0",
-  "summary": "A short description of eGMobileAPM.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/eginnovations/eGMobileAPM",
+  "version": "1.0.0",
+  "summary": "eGMobileAPM for iOS is a monitoring framework used to instrument the Native Applications",
+  "description": "eGMobileAPM is a monitoring framework. It collects the metrics from the application and send it to eG Agent. It involves gathering metrics and perfomance statistics about your applocation.",
+  "homepage": "https://github.com/eginnovation/eGMobileAPM",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "eginnovations": "Mahadeva.S@eginnovations.com"
+    "eginnovation": "saikishore.k@eginnovations.com"
   },
   "source": {
-    "git": "https://github.com/eginnovations/eGMobileAPM.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/eginnovation/eGMobileAPM.git",
+    "tag": "1.0.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "eGMobileAPM/Classes/**/*"
 }
