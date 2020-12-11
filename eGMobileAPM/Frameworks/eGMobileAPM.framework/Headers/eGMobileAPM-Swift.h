@@ -232,6 +232,12 @@ SWIFT_CLASS("_TtC11eGMobileAPM5egAPM")
 + (egAPM * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
 - (void)startWithApptoken:(NSString * _Nonnull)apptoken;
 - (void)startWithApptoken:(NSString * _Nonnull)apptoken collectorHost:(NSString * _Nonnull)collectorHost;
+- (void)disableCrash;
+- (void)enableCrash;
+- (void)disableHTTP;
+- (void)enableHTTP;
+- (void)disableTrace;
+- (void)enableTrace;
 - (void)stop;
 - (NSString * _Nonnull)userCountry SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)osVersion SWIFT_WARN_UNUSED_RESULT;
