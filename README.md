@@ -45,7 +45,7 @@ Open App.xcworkspace
 4)  Import the Monitoring Framework into the application (AppDelegate.swift) using the command:
 
 ```swift
-Import eGMobileAPM
+import eGMobileAPM
 ```
 
 5)  In your AppDelegate.swift file add this call as the first line of application: didFinishLaunchingWithOptions: 
