@@ -17,6 +17,7 @@ public enum DeviceEvent {
   }
   public func hash(into hasher: inout Swift.Hasher)
 }
+public var userInfoDict: [Swift.String : Any]
 @_inheritsConvenienceInitializers @objc open class egAPM : ObjectiveC.NSObject {
   @objc open class func sharedInstance() -> eGMobileAPM.egAPM
   @objc open func start(apptoken: Swift.String)
@@ -35,7 +36,12 @@ public enum DeviceEvent {
   @objc open func appInfo() -> Swift.String
   @objc open func devInfo() -> Swift.String
   @objc open func resInfo() -> Swift.String
+  @objc open func userInfo() -> Swift.String
   @objc open func getViewController() -> Swift.String
+  @discardableResult
+  @objc open func setUserName(_ value: Swift.String) -> Swift.Bool
+  @discardableResult
+  @objc open func setAttribute(_ name: Swift.String, _ value: Any) -> Swift.Bool
   @objc open func setCachePolicy(_ policy: Foundation.URLCache.StoragePolicy)
   @objc open func show()
   @objc open func hide()

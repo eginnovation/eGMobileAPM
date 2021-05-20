@@ -247,7 +247,10 @@ SWIFT_CLASS("_TtC11eGMobileAPM5egAPM")
 - (NSString * _Nonnull)appInfo SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)devInfo SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)resInfo SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getViewController SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)setUserName:(NSString * _Nonnull)value;
+- (BOOL)setAttribute:(NSString * _Nonnull)name :(id _Nonnull)value;
 - (void)setCachePolicy:(NSURLCacheStoragePolicy)policy;
 - (void)show;
 - (void)hide;
@@ -581,7 +584,10 @@ SWIFT_CLASS("_TtC11eGMobileAPM5egAPM")
 - (NSString * _Nonnull)appInfo SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)devInfo SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)resInfo SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getViewController SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)setUserName:(NSString * _Nonnull)value;
+- (BOOL)setAttribute:(NSString * _Nonnull)name :(id _Nonnull)value;
 - (void)setCachePolicy:(NSURLCacheStoragePolicy)policy;
 - (void)show;
 - (void)hide;
