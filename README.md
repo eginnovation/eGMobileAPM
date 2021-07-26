@@ -24,80 +24,78 @@ Installation
 # Configure using swift
 
 
-1)  In the Podfile for your project, add the following line:
+- 1)  In the Podfile for your project, add the following line:
 
 ```ruby
 pod 'eGMobileAPM', :git => "https://github.com/eginnovation/eGMobileAPM.git"
 ```
 
-2)  Close your project in Xcode, and update it by running this command from the Terminal in your project directory: 
+- 2)  Close your project in Xcode, and update it by running this command from the Terminal in your project directory: 
 
 ```ruby
 pod install
 ```
 
-3)  Open your project in Xcode by running this command from the Terminal in your project directory: 
+- 3)  Open your project in Xcode by running this command from the Terminal in your project directory: 
 
 ```swift
 Open App.xcworkspace
 ```
 
-4)  Import the Monitoring Framework into the application (AppDelegate.swift) using the command:
+- 4)  Import the Monitoring Framework into the application (AppDelegate.swift) using the command:
 
 ```swift
 import eGMobileAPM
 ```
 
-5)  In your AppDelegate.swift file add this call as the first line of application: didFinishLaunchingWithOptions: 
+- 5)  In your AppDelegate.swift file add this call as the first line of application: didFinishLaunchingWithOptions: 
 
 ```swift
 egAPM.sharedInstance().start(apptoken: “Application Token”,collectorHost: “Collector Host”) 
 ```
-In AppDelegate.swift replace the unique application token and collector host that is automatically generated.  
+- In AppDelegate.swift replace the unique application token and collector host that is automatically generated.  
 
-6) Clean and build your app, and then run it in the simulator or physical device. 
+- 6) Clean and build your app, and then run it in the simulator or physical device. 
 
 
 # Configure using Objective-C
 
-1)  In the Podfile for your project, add the following line:
+- 1)  In the Podfile for your project, add the following line:
 
 ```ruby
 pod 'eGMobileAPM', :git => "https://github.com/eginnovation/eGMobileAPM.git"
 ```
-2)  Close your project in Xcode, and update it by running this command from the Terminal in your project directory: 
+- 2)  Close your project in Xcode, and update it by running this command from the Terminal in your project directory: 
 
 ```ruby
 pod install
 ```
-3)  Open your project in Xcode by running this command from the Terminal in your project directory: 
+- 3)  Open your project in Xcode by running this command from the Terminal in your project directory: 
 
 ```objective-c
 Open App.xcworkspace
 ```
  
-4)  In your Objective – C project, create a new Swift file. You will be prompted to add a bridging header if you don’t have already one. Accept this prompt.
+- 4)  In your Objective – C project, create a new Swift file. You will be prompted to add a bridging header if you don’t have already one. Accept this prompt.
  
-5)  Import the eGMobileAPM Framework by adding to the top of MyApp-Bridging-Header.h :
+- 5)  Import the eGMobileAPM Framework by adding to the top of MyApp-Bridging-Header.h :
  
  ```objective-c
  #import “eGMobileAPM/eGMobileAPM-Swift.h”
  ```
 
-6)  Import the Monitoring Framework into the application (AppDelegate.m) using the command :
+- 6)  Import the Monitoring Framework into the application (AppDelegate.m) using the command :
 
 ```objective-c
 #import <eGMobileAPM/eGMobileAPM.h>
 ```
 
-7)  Add below line :
+- 7)  Add below line :
 
 ```objective-c
 [egAPM.sharedInstance startWithApptoken:(@" Application Token ") collectorHost:(@" Collector Host ")];
 ```
- in your AppDelegate.m and replace the unique application token and collector host that is automatically generated.
+- in your AppDelegate.m and replace the unique application token and collector host that is automatically generated.
  
-8)  Clean and build your app, and then run it in the simulator or physical device.  
-
-
+- 8)  Clean and build your app, and then run it in the simulator or physical device.  
 
