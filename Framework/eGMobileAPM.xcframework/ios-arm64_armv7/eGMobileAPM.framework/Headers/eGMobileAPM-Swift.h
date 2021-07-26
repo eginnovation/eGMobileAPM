@@ -214,11 +214,45 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+@class UITouch;
+@class UIEvent;
+
+@interface UIButton (SWIFT_EXTENSION(eGMobileAPM))
+- (void)newtouchesBegan:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
+@end
+
+@protocol UICollectionViewDelegate;
+
+@interface UICollectionView (SWIFT_EXTENSION(eGMobileAPM))
+- (void)nsh_setWithDelegate:(id <UICollectionViewDelegate> _Nullable)delegate;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAt:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+@interface UICollectionView (SWIFT_EXTENSION(eGMobileAPM))
+- (void)newViewTouchesBegan:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
+- (void)newViewTouchesEnded:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
+@end
+
+
 
 @interface UIImage (SWIFT_EXTENSION(eGMobileAPM))
 - (nonnull instancetype)initWithContentsOfFile1:(NSString * _Nonnull)contentsOfFile1;
 - (nonnull instancetype)initWithData1:(NSData * _Nonnull)data1;
 - (nonnull instancetype)initWithData1:(NSData * _Nonnull)data1 scale1:(CGFloat)scale1;
+@end
+
+@protocol UITableViewDelegate;
+
+@interface UITableView (SWIFT_EXTENSION(eGMobileAPM))
+- (void)nsh_setWithDelegate:(id <UITableViewDelegate> _Nullable)delegate;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAt:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+@interface UITableView (SWIFT_EXTENSION(eGMobileAPM))
+- (void)newViewTouchesBegan:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
+- (void)newViewTouchesEnded:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
 @end
 
 
@@ -239,6 +273,8 @@ SWIFT_CLASS("_TtC11eGMobileAPM5egAPM")
 - (void)enableHTTP;
 - (void)disableTrace;
 - (void)enableTrace;
+- (void)disableUI;
+- (void)enableUI;
 - (void)stop;
 - (NSString * _Nonnull)userCountry SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)osVersion SWIFT_WARN_UNUSED_RESULT;
@@ -551,11 +587,45 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+@class UITouch;
+@class UIEvent;
+
+@interface UIButton (SWIFT_EXTENSION(eGMobileAPM))
+- (void)newtouchesBegan:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
+@end
+
+@protocol UICollectionViewDelegate;
+
+@interface UICollectionView (SWIFT_EXTENSION(eGMobileAPM))
+- (void)nsh_setWithDelegate:(id <UICollectionViewDelegate> _Nullable)delegate;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAt:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+@interface UICollectionView (SWIFT_EXTENSION(eGMobileAPM))
+- (void)newViewTouchesBegan:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
+- (void)newViewTouchesEnded:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
+@end
+
+
 
 @interface UIImage (SWIFT_EXTENSION(eGMobileAPM))
 - (nonnull instancetype)initWithContentsOfFile1:(NSString * _Nonnull)contentsOfFile1;
 - (nonnull instancetype)initWithData1:(NSData * _Nonnull)data1;
 - (nonnull instancetype)initWithData1:(NSData * _Nonnull)data1 scale1:(CGFloat)scale1;
+@end
+
+@protocol UITableViewDelegate;
+
+@interface UITableView (SWIFT_EXTENSION(eGMobileAPM))
+- (void)nsh_setWithDelegate:(id <UITableViewDelegate> _Nullable)delegate;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAt:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+@interface UITableView (SWIFT_EXTENSION(eGMobileAPM))
+- (void)newViewTouchesBegan:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
+- (void)newViewTouchesEnded:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
 @end
 
 
@@ -576,6 +646,8 @@ SWIFT_CLASS("_TtC11eGMobileAPM5egAPM")
 - (void)enableHTTP;
 - (void)disableTrace;
 - (void)enableTrace;
+- (void)disableUI;
+- (void)enableUI;
 - (void)stop;
 - (NSString * _Nonnull)userCountry SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)osVersion SWIFT_WARN_UNUSED_RESULT;
