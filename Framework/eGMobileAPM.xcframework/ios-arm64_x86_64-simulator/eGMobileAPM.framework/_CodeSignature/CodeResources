@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/eGMobileAPM-Swift.h</key>
 		<data>
-		4KDB23aBtA/Yt/4C4d+nCUlw74U=
+		f1vGhiZxUa0AsI3BDk8igian5Ew=
 		</data>
 		<key>Headers/eGMobileAPM.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Cvln+UqqSrqTLTiX7NMibqWM0bw=
+		EJiHBte4l4pNcxAWyFd6Vo0cPTo=
 		</data>
 		<key>Modules/eGMobileAPM.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/eGMobileAPM.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		44k1N+mh/xMcXcHnCgZ9NgRAt8U=
+		+jCDEC3DY+75JLSbg/+zxNYMar0=
 		</data>
 		<key>Modules/eGMobileAPM.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ft+adw2ct0Xcg45ITITgh5DYJ/A=
+		yqz26iQfRnPB8+gJOR0HNgE/SsA=
 		</data>
 		<key>Modules/eGMobileAPM.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/eGMobileAPM.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		44k1N+mh/xMcXcHnCgZ9NgRAt8U=
+		+jCDEC3DY+75JLSbg/+zxNYMar0=
 		</data>
 		<key>Modules/eGMobileAPM.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		ft+adw2ct0Xcg45ITITgh5DYJ/A=
+		yqz26iQfRnPB8+gJOR0HNgE/SsA=
 		</data>
 		<key>Modules/eGMobileAPM.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/eGMobileAPM.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		8UaAFE8jvXbsiN5/uyYi2CweiOo=
+		UbtG8XLnO/SFh/sugBnoUr50Dlc=
 		</data>
 		<key>Modules/eGMobileAPM.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+Mv+2lxGridC3r6kFG1IZnt/pW0=
+		7WXYbfCiRH+7QzzDiXDHgd2VLVE=
 		</data>
 		<key>Modules/eGMobileAPM.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -58,11 +58,11 @@
 		</data>
 		<key>Modules/eGMobileAPM.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		8UaAFE8jvXbsiN5/uyYi2CweiOo=
+		UbtG8XLnO/SFh/sugBnoUr50Dlc=
 		</data>
 		<key>Modules/eGMobileAPM.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		+Mv+2lxGridC3r6kFG1IZnt/pW0=
+		7WXYbfCiRH+7QzzDiXDHgd2VLVE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -75,11 +75,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4KDB23aBtA/Yt/4C4d+nCUlw74U=
+			f1vGhiZxUa0AsI3BDk8igian5Ew=
 			</data>
 			<key>hash2</key>
 			<data>
-			Y9NHnsYEmuVszpEDd7/xbNTzDd/2PIijVqRqhory+18=
+			O3HHdyL2xh5dcX4GoQw892DvFx3DHDOEkqsXj8kpObE=
 			</data>
 		</dict>
 		<key>Headers/eGMobileAPM.h</key>
@@ -108,22 +108,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			44k1N+mh/xMcXcHnCgZ9NgRAt8U=
+			+jCDEC3DY+75JLSbg/+zxNYMar0=
 			</data>
 			<key>hash2</key>
 			<data>
-			LK6OZLgQTFSl3yrJKkA+mCmL317TMaduJwPtXCkpWKA=
+			0HzoQbPCdWDHaBGeuF2cjkzXm+sn0s5HOOZ8alBxx88=
 			</data>
 		</dict>
 		<key>Modules/eGMobileAPM.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ft+adw2ct0Xcg45ITITgh5DYJ/A=
+			yqz26iQfRnPB8+gJOR0HNgE/SsA=
 			</data>
 			<key>hash2</key>
 			<data>
-			gpo8qZ8i6U9pyLOCRv+xLFuiyxkIHqAtQ/LCEXG4W9s=
+			VZKnYKlPOgR+zSmedXDB4x81M8OZdNOaqmoxl4N70q4=
 			</data>
 		</dict>
 		<key>Modules/eGMobileAPM.swiftmodule/arm64.swiftdoc</key>
@@ -141,22 +141,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			44k1N+mh/xMcXcHnCgZ9NgRAt8U=
+			+jCDEC3DY+75JLSbg/+zxNYMar0=
 			</data>
 			<key>hash2</key>
 			<data>
-			LK6OZLgQTFSl3yrJKkA+mCmL317TMaduJwPtXCkpWKA=
+			0HzoQbPCdWDHaBGeuF2cjkzXm+sn0s5HOOZ8alBxx88=
 			</data>
 		</dict>
 		<key>Modules/eGMobileAPM.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ft+adw2ct0Xcg45ITITgh5DYJ/A=
+			yqz26iQfRnPB8+gJOR0HNgE/SsA=
 			</data>
 			<key>hash2</key>
 			<data>
-			gpo8qZ8i6U9pyLOCRv+xLFuiyxkIHqAtQ/LCEXG4W9s=
+			VZKnYKlPOgR+zSmedXDB4x81M8OZdNOaqmoxl4N70q4=
 			</data>
 		</dict>
 		<key>Modules/eGMobileAPM.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -174,22 +174,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8UaAFE8jvXbsiN5/uyYi2CweiOo=
+			UbtG8XLnO/SFh/sugBnoUr50Dlc=
 			</data>
 			<key>hash2</key>
 			<data>
-			6Akv3KKpjmSzuX1DOiN/PAbAvraT5tts6vzKePkbjvg=
+			XBjlm6B8q7F4AHGQ/39PRQ6BEGY3GshYKdB7IOGF6iU=
 			</data>
 		</dict>
 		<key>Modules/eGMobileAPM.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+Mv+2lxGridC3r6kFG1IZnt/pW0=
+			7WXYbfCiRH+7QzzDiXDHgd2VLVE=
 			</data>
 			<key>hash2</key>
 			<data>
-			f7wSDG3ucSgU9wgKOBRS3+LGHQ5Q9v/TvijMcTqSI4c=
+			Ike+0aXpzhss056FofvhgfPJBfnVlz0KzzZt5brCaSI=
 			</data>
 		</dict>
 		<key>Modules/eGMobileAPM.swiftmodule/x86_64.swiftdoc</key>
@@ -207,22 +207,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8UaAFE8jvXbsiN5/uyYi2CweiOo=
+			UbtG8XLnO/SFh/sugBnoUr50Dlc=
 			</data>
 			<key>hash2</key>
 			<data>
-			6Akv3KKpjmSzuX1DOiN/PAbAvraT5tts6vzKePkbjvg=
+			XBjlm6B8q7F4AHGQ/39PRQ6BEGY3GshYKdB7IOGF6iU=
 			</data>
 		</dict>
 		<key>Modules/eGMobileAPM.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+Mv+2lxGridC3r6kFG1IZnt/pW0=
+			7WXYbfCiRH+7QzzDiXDHgd2VLVE=
 			</data>
 			<key>hash2</key>
 			<data>
-			f7wSDG3ucSgU9wgKOBRS3+LGHQ5Q9v/TvijMcTqSI4c=
+			Ike+0aXpzhss056FofvhgfPJBfnVlz0KzzZt5brCaSI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

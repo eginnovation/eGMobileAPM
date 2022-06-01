@@ -59,6 +59,10 @@ extension UIImage {
   @objc convenience dynamic public init(data1: Foundation.Data)
   @objc convenience dynamic public init(data1: Foundation.Data, scale1: CoreGraphics.CGFloat)
 }
+extension UIButton {
+  @objc dynamic open func newtouchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc dynamic open func newtouchesEnd(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+}
 extension UITableView {
   @objc dynamic open func newViewTouchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
   @objc dynamic open func newViewTouchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
