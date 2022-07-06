@@ -7,7 +7,6 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/eginnovation/eGMobileAPM'
 
   s.source = { :git => 'https://github.com/eginnovation/eGMobileAPM.git', :tag => s.version }
-  s.source_files = 'Classes/**/*'
   s.swift_version = '5.0'
   s.ios.vendored_frameworks = 'Framework/eGMobileAPM.xcframework'
 
