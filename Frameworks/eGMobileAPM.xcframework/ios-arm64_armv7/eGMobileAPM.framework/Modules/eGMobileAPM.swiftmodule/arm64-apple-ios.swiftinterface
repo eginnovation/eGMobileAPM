@@ -1,12 +1,13 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
-// swift-module-flags: -target x86_64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name eGMobileAPM
+// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name eGMobileAPM
 import SystemConfiguration.CaptiveNetwork
 import CoreTelephony
 import Foundation
 import Swift
 import SystemConfiguration
 import UIKit
+import WebKit
 @_exported import eGMobileAPM
 public enum DeviceEvent {
   case lifecycle
@@ -60,6 +61,7 @@ extension UIImage {
 }
 extension UIButton {
   @objc dynamic open func newtouchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc dynamic open func newtouchesEnd(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
 }
 extension UITableView {
   @objc dynamic open func newViewTouchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
@@ -78,6 +80,9 @@ extension UICollectionView {
   @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
 }
 @_hasMissingDesignatedInitializers public class ApplicationInfoModel {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class UserInfoModel {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc open class egProtocol : Foundation.URLProtocol {

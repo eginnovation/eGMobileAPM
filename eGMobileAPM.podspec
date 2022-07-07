@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'eGMobileAPM'
-  s.version = '1.0.1'
+  s.version = '1.0.5'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
 
   s.summary = 'eGMobileAPM for iOS is a monitoring framework used to instrument the Native Applications'
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
   s.source = { :git => 'https://github.com/eginnovation/eGMobileAPM.git', :tag => s.version }
 
-  s.ios.vendored_frameworks = 'Framework/eGMobileAPM.xcframework'
+  s.ios.vendored_frameworks = 'Frameworks/eGMobileAPM.xcframework'
 
   s.platform = :ios, '10.0'
   s.requires_arc = true

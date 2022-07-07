@@ -7,6 +7,7 @@ import Foundation
 import Swift
 import SystemConfiguration
 import UIKit
+import WebKit
 @_exported import eGMobileAPM
 public enum DeviceEvent {
   case lifecycle
@@ -60,6 +61,7 @@ extension UIImage {
 }
 extension UIButton {
   @objc dynamic open func newtouchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc dynamic open func newtouchesEnd(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
 }
 extension UITableView {
   @objc dynamic open func newViewTouchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
@@ -78,6 +80,9 @@ extension UICollectionView {
   @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
 }
 @_hasMissingDesignatedInitializers public class ApplicationInfoModel {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class UserInfoModel {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc open class egProtocol : Foundation.URLProtocol {

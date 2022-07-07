@@ -219,6 +219,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @interface UIButton (SWIFT_EXTENSION(eGMobileAPM))
 - (void)newtouchesBegan:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
+- (void)newtouchesEnd:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
 @end
 
 @protocol UICollectionViewDelegate;
@@ -254,6 +255,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 - (void)newViewTouchesBegan:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
 - (void)newViewTouchesEnded:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
 @end
+
 
 
 
@@ -592,6 +594,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @interface UIButton (SWIFT_EXTENSION(eGMobileAPM))
 - (void)newtouchesBegan:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
+- (void)newtouchesEnd:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
 @end
 
 @protocol UICollectionViewDelegate;
@@ -627,6 +630,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 - (void)newViewTouchesBegan:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
 - (void)newViewTouchesEnded:(NSSet<UITouch *> * _Nonnull)touches with:(UIEvent * _Nullable)event;
 @end
+
 
 
 
