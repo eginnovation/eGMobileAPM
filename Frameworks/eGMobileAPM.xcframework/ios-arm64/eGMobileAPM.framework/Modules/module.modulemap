@@ -6,6 +6,6 @@ framework module eGMobileAPM {
 }
 
 module eGMobileAPM.Swift {
-    header "eGMobileAPM-Swift.h"
-    requires objc
+  header "eGMobileAPM-Swift.h"
+  requires objc
 }

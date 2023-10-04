@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
-// swift-module-flags: -target arm64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name eGMobileAPM
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name eGMobileAPM
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import SystemConfiguration.CaptiveNetwork
 import CoreTelephony
 import Foundation
@@ -8,17 +9,20 @@ import Swift
 import SystemConfiguration
 import UIKit
 import WebKit
+import _Concurrency
+import _StringProcessing
 @_exported import eGMobileAPM
 public enum DeviceEvent {
   case lifecycle
   case network
   public static func == (a: eGMobileAPM.DeviceEvent, b: eGMobileAPM.DeviceEvent) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public var userInfoDict: [Swift.String : Any]
+public var httpInfoDict: [Swift.String : Any]
 @_inheritsConvenienceInitializers @objc open class egAPM : ObjectiveC.NSObject {
   @objc open class func sharedInstance() -> eGMobileAPM.egAPM
   @objc open func start(apptoken: Swift.String)
@@ -40,44 +44,49 @@ public var userInfoDict: [Swift.String : Any]
   @objc open func devInfo() -> Swift.String
   @objc open func resInfo() -> Swift.String
   @objc open func userInfo() -> Swift.String
+  @objc open func sendEvent(monitorID: Swift.String, eventID: Swift.String, payload: Swift.Dictionary<Swift.String, Any>)
+  @objc open func sendSreenName(screenName: Swift.String)
   @objc open func getViewController() -> Swift.String
+  @objc open func leaveAction()
   @discardableResult
   @objc open func setUserName(_ value: Swift.String) -> Swift.Bool
   @discardableResult
   @objc open func setAttribute(_ name: Swift.String, _ value: Any) -> Swift.Bool
+  @discardableResult
+  @objc open func setHttpAttribute(_ name: Swift.String, _ value: Any) -> Swift.Bool
   @objc open func setCachePolicy(_ policy: Foundation.URLCache.StoragePolicy)
   @objc open func show()
   @objc open func hide()
   @objc open func ignoreURL(_ url: Swift.String)
   @objc open func saveCrashDetails(exception: Foundation.NSException)
   @objc open func networkOperationNSURLConnection(content: Swift.String)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
-extension UIImage {
+extension UIKit.UIImage {
   @objc convenience dynamic public init(contentsOfFile1: Swift.String)
   @objc convenience dynamic public init(data1: Foundation.Data)
-  @objc convenience dynamic public init(data1: Foundation.Data, scale1: CoreGraphics.CGFloat)
+  @objc convenience dynamic public init(data1: Foundation.Data, scale1: CoreFoundation.CGFloat)
 }
-extension UIButton {
-  @objc dynamic open func newtouchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @objc dynamic open func newtouchesEnd(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+extension UIKit.UIButton {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func newtouchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func newtouchesEnd(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
 }
-extension UITableView {
-  @objc dynamic open func newViewTouchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @objc dynamic open func newViewTouchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+extension UIKit.UITableView {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func newViewTouchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func newViewTouchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
 }
-extension UICollectionView {
-  @objc dynamic open func newViewTouchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @objc dynamic open func newViewTouchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+extension UIKit.UICollectionView {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func newViewTouchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func newViewTouchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
 }
-extension UITableView {
-  @objc dynamic open func nsh_set(delegate: UIKit.UITableViewDelegate?)
-  @objc dynamic open func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+extension UIKit.UITableView {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func nsh_set(delegate: UIKit.UITableViewDelegate?)
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
 }
-extension UICollectionView {
-  @objc dynamic open func nsh_set(delegate: UIKit.UICollectionViewDelegate?)
-  @objc dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+extension UIKit.UICollectionView {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func nsh_set(delegate: UIKit.UICollectionViewDelegate?)
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
 }
 @_hasMissingDesignatedInitializers public class ApplicationInfoModel {
   @objc deinit
@@ -91,10 +100,10 @@ extension UICollectionView {
   @objc override dynamic open func startLoading()
   @objc override dynamic open func stopLoading()
   @objc override dynamic open class func canonicalRequest(for request: Foundation.URLRequest) -> Foundation.URLRequest
-  @objc deinit
   @objc override dynamic public init(request: Foundation.URLRequest, cachedResponse: Foundation.CachedURLResponse?, client: Foundation.URLProtocolClient?)
+  @objc deinit
 }
-extension egProtocol : Foundation.URLSessionDelegate, Foundation.URLSessionDataDelegate, Foundation.URLSessionTaskDelegate {
+extension eGMobileAPM.egProtocol : Foundation.URLSessionDelegate, Foundation.URLSessionDataDelegate, Foundation.URLSessionTaskDelegate {
   @objc dynamic public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
   @objc dynamic public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse, completionHandler: @escaping (Foundation.URLSession.ResponseDisposition) -> Swift.Void)
   @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
@@ -109,9 +118,9 @@ extension egProtocol : Foundation.URLSessionDelegate, Foundation.URLSessionDataD
 @_hasMissingDesignatedInitializers public class DeviceInfoModel {
   @objc deinit
 }
-extension UIDevice {
-  public static let modelName: Swift.String
-  public func getIPAddress() -> Swift.String?
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
+  @_Concurrency.MainActor(unsafe) public func getIPAddress() -> Swift.String?
 }
 public enum ReachabilityError : Swift.Error {
   case FailedToCreateWithAddress(Darwin.sockaddr_in)
@@ -122,7 +131,7 @@ public enum ReachabilityError : Swift.Error {
 }
 @available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
 public let ReachabilityChangedNotification: Foundation.NSNotification.Name
-extension NSNotification.Name {
+extension Foundation.NSNotification.Name {
   public static let reachabilityChanged: Foundation.Notification.Name
 }
 public class Reachability {
@@ -135,10 +144,10 @@ public class Reachability {
       get
     }
     public static func == (a: eGMobileAPM.Reachability.NetworkStatus, b: eGMobileAPM.Reachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
   public enum Connection : Swift.CustomStringConvertible {
     case none, wifi, cellular
@@ -146,10 +155,10 @@ public class Reachability {
       get
     }
     public static func == (a: eGMobileAPM.Reachability.Connection, b: eGMobileAPM.Reachability.Connection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
   public var whenReachable: eGMobileAPM.Reachability.NetworkReachable?
   public var whenUnreachable: eGMobileAPM.Reachability.NetworkUnreachable?
@@ -171,7 +180,7 @@ public class Reachability {
   convenience public init?(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil)
   @objc deinit
 }
-extension Reachability {
+extension eGMobileAPM.Reachability {
   public func startNotifier() throws
   public func stopNotifier()
   public var isReachable: Swift.Bool {
@@ -234,11 +243,11 @@ public enum HTTPModelShortType : Swift.String {
   case HTML
   case IMAGE
   case OTHER
+  public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
-  public init?(rawValue: Swift.String)
 }
 extension eGMobileAPM.DeviceEvent : Swift.Equatable {}
 extension eGMobileAPM.DeviceEvent : Swift.Hashable {}
